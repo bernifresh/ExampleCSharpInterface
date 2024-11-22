@@ -5,14 +5,7 @@ namespace ProgrammingAgainstInterfaces.ViewModels;
 
 public class ExampleViewModel : IExampleViewModel
 {
-    public string Title { get; }
-    public ObservableCollection<string> Names { get; }
-    public double RandomNumber { get; }
-
-    internal ExampleViewModel()
-    {
-        Title = "Example ViewModel";
-        Names = ["Hello, World!", "Test ViewModel!", "Bernard ViewModel!", "Olaf ViewModel!", "Ferdinant"]; 
-        RandomNumber = Random.Shared.NextDouble();
-    }
+    public string Title => "Example ViewModel";
+    public ObservableCollection<string> Names { get; } = ["Hello, World!", "Test ViewModel!", "Bernard ViewModel!", "Olaf ViewModel!", "Ferdinant"];
+    public double RandomNumber { get; } = Random.Shared.NextDouble();
 }
