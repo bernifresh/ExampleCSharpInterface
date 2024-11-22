@@ -8,9 +8,9 @@ public class ExampleRepository(IMongoDatabase database) : IExampleRepository
 {
     private readonly IMongoCollection<ExampleEntity> _collection = database.GetCollection<ExampleEntity>("exampleViewModels");
 
-    public async Task<IEnumerable<ExampleEntity>> GetAllAsync()
+    public IEnumerable<ExampleEntity> GetAll()
     {
-        return await _collection.Find(_ => true).ToListAsync();
+        return _collection.Find(_ => true).ToList();
     }
 
     public async Task<ExampleEntity> GetByIdAsync(string id)
