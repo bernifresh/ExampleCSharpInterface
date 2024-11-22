@@ -4,7 +4,7 @@ namespace ProgrammingAgainstInterfaces.ViewModels.Interfaces;
 
 public interface IExampleViewModel
 {
-    public string Title { get; set; }
+    public string Title { get; }
     public ObservableCollection<string> Names { get; }
     public double RandomNumber { get; }
 }
