@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="ProgrammingAgainstInterfaces.UserControls.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:interfaces="clr-namespace:ProgrammingAgainstInterfaces.ViewModels.Interfaces"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance interfaces:IExampleViewModel}">
+    <Grid>
+       <Grid.ColumnDefinitions>
+           <ColumnDefinition Width="Auto"/>
+           <ColumnDefinition Width="Auto"/>
+       </Grid.ColumnDefinitions> 
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <Label 
+            Content="{Binding Title}"
+            Grid.Column="0" Grid.Row="0"/>
+        <Label 
+            Content="{Binding RandomNumber}"
+            Grid.Column="0" Grid.Row="1"/>
+        
+        <ListView 
+            ItemsSource="{Binding Names}"
+            Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"/>
+    </Grid>
+</UserControl>
