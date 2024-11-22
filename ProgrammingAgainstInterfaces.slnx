@@ -1,0 +1,7 @@
+﻿<Solution>
+  <Project Path="ProgrammingAgainstInterfaces\ProgrammingAgainstInterfaces.csproj" Type="Classic C#" />
+  <Folder Name="Docker">
+    <File Path="docker-compose.yml"/>
+    <File Path="init-mongo/init.js"/>
+  </Folder>
+</Solution>
