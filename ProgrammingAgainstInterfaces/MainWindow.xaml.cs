@@ -1,5 +1,4 @@
 ﻿using System.Windows;
-using ProgrammingAgainstInterfaces.ViewModels;
 
 namespace ProgrammingAgainstInterfaces;
 
@@ -11,6 +10,5 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        DataContext = new ExampleViewModel();
     }
 }
